@@ -6,8 +6,8 @@
         <meta name="description" content="Developer workspaces to modify, run and debug code in the cloud or on-premises.">
         <meta name="keywords" content="Codenvy, Cloud IDE, Java IDE, online IDE, web IDE, development environment, IDE, cloud, JavaScript, Java, Spring, Groovy, Ruby, PHP, code, deploy">
         <meta name="author" content="Codenvy">
-        <link rel="shortcut icon" href="images/ico/favicon.png">
-        <title>Codenvy - Login</title>
+        <link rel="shortcut icon" href="images/ico/favicon.ico">
+        <title>Codenvy - Setup</title>
 
         <!-- Bootstrap core CSS -->
         <link rel="stylesheet" href="styles/bootstrap.css" >
