@@ -19,7 +19,7 @@
         <script src="script/jquery.min.js"></script>
         <script src="script/jquery.validate.js"></script>
     </head>
-<body>
+<body onload="setDefault()">
 <script type="text/javascript">
     <?php
     include 'conf/config.php';

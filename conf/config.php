@@ -1,5 +1,5 @@
-var text = "Including text";
-console.log(text);
-<?php
-echo 'email ' . htmlspecialchars($_POST["email"]) . '!';
-?>
+var text = "dns";
+function setDefault(){
+	$(".info").html(text);
+	$("input[name='dns']")[0].value=text;
+	}
