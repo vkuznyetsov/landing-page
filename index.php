@@ -21,9 +21,13 @@
     </head>
 <body onload="setDefault()">
 <script type="text/javascript">
-    <?php
+var dns = "    <?php
     include 'conf/config.php';
-    ?>
+    ?>";
+function setDefault(){
+    $(".info").html("Current DNS name: "+ dns);
+    $("input[name='dns']")[0].value = dns;
+    }
 </script>
     <div class="signup-page">
         <div class="vmiddle">
@@ -36,7 +40,7 @@
                     	<form action="setup.php" id="onpremloginForm" class="onpremloginForm" method="post">
                     		<ul>
                                 <li>
-                                    <p class="info">Current DNS name : ec2-52-7-130-190.compute-1.amazonaws.com</p>
+                                    <p class="info"></p>
                                 </li>
                                 <li>
                        				<span class="input-con">
