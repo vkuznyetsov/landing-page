@@ -45,7 +45,7 @@ function setDefault(){
                                 <li>
                        				<span class="input-con">
                                         <label for="dns">Change DNS name</label>
-                    					<input class="required" type="text" name="dns" value="ec2-52-7-130-190.compute-1.amazonaws.com" />
+                    					<input class="required" type="text" name="dns"/>
                     				</span>
                                     <p></p>
                                     <span class="input-con">
