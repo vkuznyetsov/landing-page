@@ -1,12 +1,13 @@
-<?php header('Access-Control-Allow-Origin: *'); ?>
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Setup</title>
+    <link rel="stylesheet" href="styles/bootstrap.css" >
 	<script src="script/jquery.min.js"></script>
 </head>
 <body>
 <p color='green'>Congratulations!!!</p>
+<img class="loading" src="images/wait.gif">
 <?php
 echo "<div style='color:blue;'>";
 echo '<p>email: ' . htmlspecialchars($_POST["email"])."</p>";
@@ -31,7 +32,6 @@ fclose($fp);
 #print_r($output);  // to see the respond to your command
 ?>
 <script type="text/javascript">
-   // setTimeout(function(){window.location='http://<?php echo trim(htmlspecialchars($_POST["dns"]))?>'}, 5000);
 	var intervalID = window.setInterval(function(){
 		$.ajax({
 		    url: /api/,
@@ -41,11 +41,13 @@ fclose($fp);
 		            window.location='http://<?php echo trim(htmlspecialchars($_POST["dns"]))?>';
 		        }else{
 		            window.console.error('Api error.');
+		            $('.loading').addClass('hidden');
 		            clearInterval(intervalID);
 		        }
 		    },
 		    error: function(){
 		        window.console.info('API is not ready yet...');
+		        $('.loading').addClass('hidden');
 		    }
 		});
    	
