@@ -32,6 +32,7 @@ fclose($fp);
 #print_r($output);  // to see the respond to your command
 ?>
 <script type="text/javascript">
+	var maxAttempt = 2;
 	var intervalID = window.setInterval(function(){
 		$.ajax({
 		    url: /api/,
@@ -40,9 +41,12 @@ fclose($fp);
 		        if (response.implementationVendor) {//response.implementationVendor == "Codenvy, S.A."
 		            window.location='http://<?php echo trim(htmlspecialchars($_POST["dns"]))?>';
 		        }else{
-		            window.console.error('Api error.');
-		            $('.loading').addClass('hidden');
-		            clearInterval(intervalID);
+		            window.console.error('API is not ready yet...');
+		            --maxAttempt;
+		            if (!maxAttempt){
+			            $('.loading').addClass('hidden');
+			            clearInterval(intervalID);
+		            }
 		        }
 		    },
 		    error: function(){
