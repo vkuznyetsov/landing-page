@@ -18,19 +18,19 @@ if (isset($_POST["dns"])) { ?>
 		    type: "OPTIONS",
 		    success: function(response){
 		        if (response.implementationVendor) {//response.implementationVendor == "Codenvy, S.A."
+					clearInterval(intervalID);
+					$('.loading').addClass('hidden');
 		            window.location='http://<?php echo trim(htmlspecialchars($_POST["dns"]))?>';
 		        }else{
 		            window.console.error('API is not ready yet...');
 		            //--maxAttempt;
 		            if (!maxAttempt){
-			            $('.loading').addClass('hidden');
 			            clearInterval(intervalID);
 		            }
 		        }
 		    },
 		    error: function(){
 		        window.console.info('API is not ready yet...');
-		        $('.loading').addClass('hidden');
 		    }
 		});
    	
