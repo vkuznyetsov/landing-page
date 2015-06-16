@@ -21,9 +21,7 @@
     </head>
 <body onload="setDefault()">
 <script type="text/javascript">
-var dns = "    <?php
-    include 'conf/config.php';
-    ?>";
+var dns = "<?php include 'conf/config.php';?>";
 function setDefault(){
     $(".info").html("Current DNS name: "+ dns);
     $("input[name='dns']")[0].value = dns;
@@ -60,7 +58,8 @@ function setDefault(){
                                     <p></p>
                                     <span class="input-con">
                                     <label for="password"></label>
-                                        <input name="password2" type="password" placeholder="Repeat password" required>
+                                        <input name="password2" type="password" placeholder="Repeat password" required oninvalid="this.setCustomValidity('Both passwords must match')"
+    oninput="setCustomValidity('')">
                                     </span>
                                     <p></p>
                     				<span class="input-con"><input type="submit" Value="OK" /></span>
