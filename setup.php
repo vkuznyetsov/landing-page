@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Setup</title>
+	<link rel="shortcut icon" href="images/ico/favicon.ico">
     <link rel="stylesheet" href="styles/bootstrap.css" >
     <link href="styles/style.css" rel="stylesheet">
 	<script src="script/jquery.min.js"></script>
