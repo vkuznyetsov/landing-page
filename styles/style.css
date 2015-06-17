@@ -123,7 +123,6 @@ body,h1,h2,h3,h4,h5,h6,a{
 	font-size:24px;
 	line-height:30px;
 	font-weight:400;
-	margin-bottom:19px;
 }
 .signup-page ul{
 	margin-bottom:13px;
@@ -468,9 +467,12 @@ body,h1,h2,h3,h4,h5,h6,a{
 }
 
 img.imgcenter {
-  margin-top: 20px;
+	margin-top: 20px;
 }
 
+img.loading {
+	margin: 15px 0 0px 0px;
+}
 .info {
 	text-align: center;
 	margin-bottom: 10px;
