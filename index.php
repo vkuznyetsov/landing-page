@@ -33,7 +33,7 @@ function setDefault(){
                 <div class="row text-center">
                     <div class="col-md-12">
                     	<a href="/"><img src="images/logo@3x.png" alt="logo" class="logo" /></a>
-                    	<h2>On-pemises configuration</h2>
+                        <h2>On-premises configuration</h2>
                     	<div class="error-container"></div>
                     	<form action="setup.php" id="onpremloginForm" class="onpremloginForm" method="post">
                     		<ul>
