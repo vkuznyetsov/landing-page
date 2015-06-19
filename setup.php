@@ -16,8 +16,7 @@ if (isset($_POST["dns"])) { ?>
             <div class="row text-center">
                 <div class="col-md-12">
 					<a href="/"><img src="images/logo@3x.png" alt="logo" class="logo" /></a>
-					<h2>Please wait. On-pemises installation is in progress...</h2>
-					<img class="loading" src="images/wait.gif">
+					<h2>Please wait. On-premises configuring is in progress...</h2>
 					<div class="error-container"></div>
 					<p>Operation may take up to 10 minutes.</p>
 					<div class="progress">
@@ -41,8 +40,7 @@ if (isset($_POST["dns"])) { ?>
 		    success: function(response){
 		        if (response.implementationVendor) {//response.implementationVendor == "Codenvy, S.A."
 					clearInterval(intervalID);
-					$('.loading').addClass('hidden');
-		            window.location='http://<?php echo trim(htmlspecialchars($_POST["dns"]))?>';
+		            window.location='http://<?php echo trim(htmlspecialchars($_POST["dns"]))?>/admin/';
 		        }else{
 		            window.console.error('API is not ready yet...');
 		            if (!maxAttempt){

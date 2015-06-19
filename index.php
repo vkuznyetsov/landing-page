@@ -47,7 +47,7 @@ function setDefault(){
                     				</span>
                                     <p></p>
                                     <span class="input-con">
-                                        <label for="email">Administrator email</label>
+                                        <label for="email">Set administrator email</label>
                                         <input class="required" name="email" type="email" placeholder="Admin email" required/>
                                     </span>
                                     <p></p>
